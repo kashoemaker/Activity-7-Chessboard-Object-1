@@ -45,4 +45,4 @@ you will need
   if board[column][row][0].upper() == "P"
 ```
 
-We will create the method to move a piece by clicking on it in a later activity.
+We will create the method to move a piece by clicking on it in the next activity.
