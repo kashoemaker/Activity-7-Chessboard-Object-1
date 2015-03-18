@@ -1,5 +1,25 @@
 #### Update the Board class
 1. Include the creation of the GUI chessboard in the init method, assign it to self.GUI
+```
+class Board:
+  
+  def __init__(self, root):
+    self.board = ...
+    self.pieces = ...
+    self.taken = []
+    self.GUI = tk.canvas(root, ....)
+    
+  def print(self):
+
+  def check_move(self, pos, move):
+  
+  def move(self, pos, move):
+```
+
+When a piece is moved the GUI will need to be updated. There are a couple of ways to do this. The simplest method is to just redraw the entire GUI using self.board. The most efficient method, which we will use, is to tag each piece on the GUI board. Using this method we can simply move one piece using the tag instead redrawing the entire board. 
+
+Each piece on the GUI board will need to have a unique tag for this to work, and there will have to be a way to associate a piece on the board list to the piece on the GUI board. Therefore:
+
 2. Update your board list. Currently board is a list of pieces in FEN notation. To move a piece on the GUI we need to know it's tag, and each tag needs to be unique. Make each entry in the board list a list: [FEN, tag]. 
 
 For example, the initial board would be
@@ -23,18 +43,4 @@ you will need
   if board[column][row][0].upper() == "P"
 ```
 
-```
-class Board:
-  
-  def __init__(self, root):
-    self.board = ...
-    self.pieces = ...
-    self.taken = []
-    self.GUI = tk.canvas(root, ....)
-    
-  def print(self):
-
-  def check_move(self, pos, move):
-  
-  def move(self, pos, move):
-```
+4. Create tags for the pieces that you made in Activity 6. This should be simple, just update the double loop you already have.
