@@ -16,11 +16,11 @@ class Board:
   def move(self, pos, move):
 ```
 
-  When a piece is moved the GUI will need to be updated. There are a couple of ways to do this. The simplest method is to  
-  just redraw the entire GUI using self.board. The most efficient method, which we will use, is to tag each piece on the GUI   board. Using this method we can move one piece using the tag instead redrawing the entire board. 
+    When a piece is moved the GUI will need to be updated. There are a couple of ways to do this. The simplest method is to 
+    just redraw the entire GUI using self.board. The most efficient method, which we will use, is to tag each piece on the      GUI board. Using this method we can move one piece using the tag instead redrawing the entire board. 
   
-  Each piece on the GUI board will need to have a unique tag for this to work, and there will have to be a way to associate 
-  a piece on the list board to the piece on the GUI board. Therefore:
+    Each piece on the GUI board will need to have a unique tag for this to work, and there will have to be a way to      
+    associate a piece on the list board to the piece on the GUI board. Therefore:
 
 2. Update your list board. Currently the list board is a list of pieces in FEN notation. Make each entry in the list board a list: [FEN, tag]. 
 
