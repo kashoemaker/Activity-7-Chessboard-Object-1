@@ -34,7 +34,9 @@ For example, the initial board would be
               ["R","R1"], ["N","N1"], ["B","B1"], ["Q","Q"], ["K","K"], ["B","B2"], ["N","N2"], ["R","R2"]]]
 ```
 
-3. Update the move and check_move methods to use the new board format. For example, where you currently have code that says
+3. Create tags for the pieces that you put in the GUI in Activity 6. This should be simple, just update the double loop you already have.
+ 
+4. Update the move and check_move methods to use the new board format. For example, where you currently have code that says
 ```
   if board[column][row].upper() == "P"
 ```
@@ -43,4 +45,4 @@ you will need
   if board[column][row][0].upper() == "P"
 ```
 
-4. Create tags for the pieces that you put in the GUI in Activity 6. This should be simple, just update the double loop you already have.
+
