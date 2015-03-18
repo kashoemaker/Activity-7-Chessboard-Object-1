@@ -16,11 +16,11 @@ class Board:
   def move(self, pos, move):
 ```
 
-When a piece is moved the GUI will need to be updated. There are a couple of ways to do this. The simplest method is to just redraw the entire GUI using self.board. The most efficient method, which we will use, is to tag each piece on the GUI board. Using this method we can simply move one piece using the tag instead redrawing the entire board. 
+When a piece is moved the GUI will need to be updated. There are a couple of ways to do this. The simplest method is to just redraw the entire GUI using self.board. The most efficient method, which we will use, is to tag each piece on the GUI board. Using this method we can move one piece using the tag instead redrawing the entire board. 
 
-Each piece on the GUI board will need to have a unique tag for this to work, and there will have to be a way to associate a piece on the board list to the piece on the GUI board. Therefore:
+Each piece on the GUI board will need to have a unique tag for this to work, and there will have to be a way to associate a piece on the list board to the piece on the GUI board. Therefore:
 
-2. Update your board list. Currently board is a list of pieces in FEN notation. To move a piece on the GUI we need to know it's tag, and each tag needs to be unique. Make each entry in the board list a list: [FEN, tag]. 
+2. Update your list board. Currently the list board is a list of pieces in FEN notation. Make each entry in the list board a list: [FEN, tag]. 
 
 For example, the initial board would be
 ```  
@@ -43,4 +43,4 @@ you will need
   if board[column][row][0].upper() == "P"
 ```
 
-4. Create tags for the pieces that you made in Activity 6. This should be simple, just update the double loop you already have.
+4. Create tags for the pieces that you put in the GUI in Activity 6. This should be simple, just update the double loop you already have.
